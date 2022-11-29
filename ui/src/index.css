@@ -1,0 +1,275 @@
+@import "~antd/dist/antd.css";
+@import "~react-vis/dist/style.css";
+@import "~react-grid-layout/css/styles.css";
+@import "~react-resizable/css/styles.css";
+
+/* Antd Overrides */
+.ant-form-item {
+  margin-bottom: 14px;
+}
+
+.ant-select-dropdown {
+  z-index: 9999;
+}
+
+.ant-progress-text {
+  width: 98% !important;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  top: 0;
+  z-index: 4;
+}
+
+.navigation .button-bar button {
+  margin-right: 10px;
+}
+
+.unlocked-grid-item {
+  border: 2px solid #ff000091;
+}
+
+.unlocked-grid-button {
+  color: #ff000091;
+  border: 1px solid #ff000091;
+}
+
+.unlocked-grid-button:focus {
+  color: #ff000091;
+  border: 1px solid #ff000091;
+}
+
+.monitor {
+  margin: 10px 10px 0px 10px;
+}
+
+.monitor .monitor-header {
+  display: flex;
+  align-items: center;
+}
+
+.monitor .monitor-header > span:first-child {
+  margin-right: 30px;
+}
+
+.monitor .monitor-header > button {
+  margin-left: 10px;
+}
+
+/* Override disabled collapse text color fading  */
+.ant-collapse .ant-collapse-item-disabled > .ant-collapse-header,
+.ant-collapse .ant-collapse-item-disabled > .ant-collapse-header > .arrow {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.monitor .monitor-header i {
+  font-size: 20px;
+  margin-right: 30px;
+  margin-left: 5px;
+}
+
+.monitor .collapse-detail {
+  display: flex;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.monitor .collapse-detail .ant-descriptions-title {
+  margin-bottom: 10px;
+}
+
+.monitor .collapse-detail .ant-descriptions {
+  flex: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.monitor i.anticon.anticon-close-circle {
+  color: #f5222d;
+}
+
+.monitor i.anticon.anticon-check-circle {
+  color: #52c41a;
+}
+
+.monitor i.anticon.anticon-warning {
+  color: #faad14;
+}
+
+.element-frame {
+  height: 100%;
+}
+
+.element-frame .ant-card-body {
+  height: calc(100% - 54px);
+  overflow: auto;
+}
+
+.element-frame .ant-card-body .ant-result,
+.element-frame .ant-card-body .ant-empty {
+  height: 100%;
+  padding: 1%;
+}
+
+.element-frame .card-body-wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.element-frame .card-title-bar {
+  /* height w/ buttons */
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.element-frame .card-title-bar button {
+  margin-left: 10px;
+}
+
+.element-frame .card-title-bar h4.ant-typography {
+  margin-bottom: 0px;
+}
+
+.element-frame .hover-only {
+  display: none;
+}
+
+.element-frame:hover .hover-only,
+.ant-dropdown-menu-item:hover .hover-only {
+  display: inline-block;
+}
+
+.truncated {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rv-discrete-color-legend {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rv-discrete-color-legend-item {
+  padding: 0px 10px;
+}
+
+.graph-overlay {
+  position: fixed;
+  width: calc(100% - 25px);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.graph {
+  flex: 1;
+  height: 100%;
+}
+
+.graph .graph-overlay .debug-info {
+  background-color: #00000030;
+}
+
+.graph .graph-border-top,
+.graph .graph-border-bottom,
+.graph .graph-border-left,
+.graph .graph-border-right {
+  fill: white;
+}
+
+.field-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* height: 100%; */
+  /* object-fit: scale-down; */
+}
+
+.field-view h3 {
+  margin: 0;
+}
+
+.bagpiper-controls {
+  flex: 100;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.bagpiper-controls .ant-slider {
+  flex: 1;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.bagpiper-controls span {
+  margin-right: 5px;
+}
+
+/*  Settings Pane; */
+.settings-panel {
+  display: flex;
+}
+
+.settings-panel .ant-form:first-child {
+  flex: 1;
+  margin-right: 12px;
+}
+
+.settings-panel .ant-form:last-child {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.settings-group {
+  margin-bottom: 24px;
+}
+
+.settings-group .ant-card-body {
+  padding: 10px;
+}
+
+.settings-group .ant-card-body .ant-row {
+  margin-bottom: 0px;
+}
+
+/* DashboardManager */
+.dashboard-manager > .item-selection {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-manager > .item-selection > button:nth-of-type(1) {
+  margin: 0px 10px 0px 10px;
+}
+
+.dashboard-save-form {
+  display: flex;
+}
+
+.dashboard-save-form > button {
+  margin-left: 5px;
+}
